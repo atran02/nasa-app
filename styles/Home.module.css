@@ -114,3 +114,15 @@
     flex-direction: column;
   }
 }
+
+.imgGallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin: 0.5em;
+}
+
+.imgP1{
+  
+}
