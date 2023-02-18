@@ -33,7 +33,11 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Link href={'/polychromatic'}>Polychromatic</Link>
+        <div className={styles.nav}>
+          <div className={styles.polyBtn}>
+            <Link href={'/polychromatic'}>Polychromatic</Link>
+          </div>
+        </div>
         <div className={styles.imgGallery}>
           {
             data && data.results.map((tech, index)=>{
@@ -43,7 +47,8 @@ export default function Home() {
                     tech && tech.map((t, ind)=> {
                       if(ind === 10){
                         return(
-                          <div className={styles.imgHover}>
+                          <div>
+                            <div className={styles.imgHover}></div>
                             <Image src={t} alt={t} key={ind} width={200} height={200} className={styles.imgP1}/>
                           </div>
                         )
