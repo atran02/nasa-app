@@ -82,10 +82,10 @@ export default function Polychromatic(){
             <div className={styles.polyCont}>
                 <div className={styles.rightCont}>
                     <h2>Polychromatic</h2>
-                    <div>
+                    <div >
                         <Image src={image} alt={image} width={400} height={400} />
-                        <div>{time}</div>
-                        <div>{coords[0]}, {coords[1]}</div>
+                        <div className={styles.content}>{time}</div>
+                        <div className={styles.content}>{coords[0]}, {coords[1]}</div>
                     </div>
                 </div>
 

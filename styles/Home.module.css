@@ -211,3 +211,7 @@ background-color: rgba(0, 0, 0, 0);
   background: lightcoral;
   color: rgb(255, 239, 239);
 }
+
+.content{
+  text-align: center;
+}
