@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import Image from "next/image";
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import Head from "next/head";
 
 export default function Polychromatic(){
     
@@ -58,6 +59,12 @@ export default function Polychromatic(){
 
     return (
         <>
+            <Head>
+                <title>Polychromatic | AT</title>
+                <meta name="description" content="Advance dcd styling" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+
             <div className={styles.nav}>
                 <div className={styles.polyBtn}>
                     <Link href={'/'}>Home</Link>
