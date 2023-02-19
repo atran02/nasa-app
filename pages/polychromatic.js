@@ -66,9 +66,7 @@ export default function Polychromatic(){
             </Head>
 
             <div className={styles.nav}>
-                <div className={styles.polyBtn}>
-                    <Link href={'/'}>Home</Link>
-                </div>
+                    <Link href={'/'} className={styles.polyBtn}>Home</Link>
             </div>
 
             {/* <div>

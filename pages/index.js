@@ -21,7 +21,7 @@ export default function Home() {
   }
 
   useEffect(()=>{
-    getTechTransferData()
+    getTechTransferData();
   },[])
 
   return (
@@ -34,9 +34,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.nav}>
-          <div className={styles.polyBtn}>
-            <Link href={'/polychromatic'}>Polychromatic</Link>
-          </div>
+            <Link href={'/polychromatic'} className={styles.polyBtn}>Polychromatic</Link>
         </div>
         <div className={styles.imgGallery}>
           {
@@ -47,9 +45,9 @@ export default function Home() {
                     tech && tech.map((t, ind)=> {
                       if(ind === 10){
                         return(
-                          <div>
+                          <div key={ind}>
                             <div className={styles.imgHover}></div>
-                            <Image src={t} alt={t} key={ind} width={200} height={200} className={styles.imgP1}/>
+                            <Image src={t} alt={t} width={200} height={200} className={styles.imgP1}/>
                           </div>
                         )
                       }
