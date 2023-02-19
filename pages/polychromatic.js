@@ -1,6 +1,8 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import Image from "next/image";
+import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function Polychromatic(){
     
@@ -56,46 +58,68 @@ export default function Polychromatic(){
 
     return (
         <>
-            Polychromatic
-            <Image src={image} alt={image} width={200} height={200} />
-            <div>{time}</div>
-            <div>{coords[0]}, {coords[1]}</div>
+            <div className={styles.nav}>
+                <div className={styles.polyBtn}>
+                    <Link href={'/'}>Home</Link>
+                </div>
+            </div>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Latitude</th>
-                        <th>Longitude</th>
-                        <th>Image</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        images.map((e,i)=>{
-                            return(
-                                <tr key={i}>
-                                    <td>{e.time}</td>
-                                    <td>{e.coords.lat}</td>
-                                    <td>{e.coords.lon}</td>
-                                    <td><Image src={e.image} alt={i} width={200} height={200} /></td>
-                                    <td>
-                                        <button onClick={()=>{
-                                            setImage(e.image);
-                                            setTime(e.time);
-                                            setCoords([e.coords.lat, e.coords.lon]);
-                                            console.log(images[i].images);
-                                            document.body.scrollIntoView();
-                                        }} >view</button>
-                                    </td>
-                                
-                                </tr>
-                            )
-                        })
-                    }
-                </tbody>
-            </table>
+            {/* <div>
+                Polychromatic
+                <div>
+                    <Image src={image} alt={image} width={200} height={200} />
+                    <div>{time}</div>
+                    <div>{coords[0]}, {coords[1]}</div>
+                </div>
+            </div> */}
+            <div className={styles.polyCont}>
+                <div className={styles.rightCont}>
+                    <h2>Polychromatic</h2>
+                    <div>
+                        <Image src={image} alt={image} width={400} height={400} />
+                        <div>{time}</div>
+                        <div>{coords[0]}, {coords[1]}</div>
+                    </div>
+                </div>
+
+                <div className={styles.tableCont}>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Latitude</th>
+                                <th>Longitude</th>
+                                <th>Image</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                images.map((e,i)=>{
+                                    return(
+                                        <tr key={i}>
+                                            <td>{e.time}</td>
+                                            <td>{e.coords.lat}</td>
+                                            <td>{e.coords.lon}</td>
+                                            <td><Image src={e.image} alt={i} width={200} height={200} /></td>
+                                            <td>
+                                                <button className={styles.btnV} onClick={()=>{
+                                                    setImage(e.image);
+                                                    setTime(e.time);
+                                                    setCoords([e.coords.lat, e.coords.lon]);
+                                                    console.log(images[i].images);
+                                                    document.body.scrollIntoView();
+                                                }} >view</button>
+                                            </td>
+                                        
+                                        </tr>
+                                    )
+                                })
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
             
 
         </>

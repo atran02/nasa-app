@@ -164,3 +164,50 @@ background-color: rgba(0, 0, 0, 0);
   z-index: 1;
   padding-left: 1em;
 }
+
+.tableCont{
+  display: flex;
+  margin: 2em;
+  overflow: auto;
+  height: 80vh;
+  position: relative;
+  bottom: 0;
+  margin-top: 8em;
+}
+
+.rightCont{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  color: lightcoral;
+  gap: 1em;
+}
+
+.polyCont{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btnV{
+  background: rgb(255, 239, 239);
+  border: 2px solid lightcoral;
+  border-radius: 2em;
+  color: lightcoral;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.5em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 4em;
+  margin: 1em;
+  
+}
+
+.btnV:hover{
+  background: lightcoral;
+  color: rgb(255, 239, 239);
+}
