@@ -81,7 +81,7 @@ export default function Polychromatic(){
                 <div className={styles.rightCont}>
                     <h2>Polychromatic</h2>
                     <div >
-                        <Image src={image} alt={image} width={400} height={400} />
+                        <Image src={image} alt={image} width={400} height={400} unoptimized />
                         <div className={styles.content}>{time}</div>
                         <div className={styles.content}>{coords[0]}, {coords[1]}</div>
                     </div>
@@ -106,7 +106,7 @@ export default function Polychromatic(){
                                             <td>{e.time}</td>
                                             <td>{e.coords.lat}</td>
                                             <td>{e.coords.lon}</td>
-                                            <td><Image src={e.image} alt={i} width={200} height={200} /></td>
+                                            <td><Image src={e.image} alt={i} width={200} height={200} unoptimized /></td>
                                             <td>
                                                 <button className={styles.btnV} onClick={()=>{
                                                     setImage(e.image);

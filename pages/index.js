@@ -47,7 +47,7 @@ export default function Home() {
                         return(
                           <div key={ind}>
                             <div className={styles.imgHover}></div>
-                            <Image src={t} alt={t} width={200} height={200} className={styles.imgP1}/>
+                            <Image src={t} alt={t} width={200} height={200} className={styles.imgP1} unoptimized />
                           </div>
                         )
                       }
